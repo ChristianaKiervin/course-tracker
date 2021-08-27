@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="175.0" hgap="20" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kiervinc_assignment6.FXMLCourseListController">
+    
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50.0" />
+        <ColumnConstraints percentWidth="50.0" />
+    </columnConstraints>
+    
+    <children>
+        
+        <Label text="Select a course from the list" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="ddCourses" prefWidth="150" editable="false" visibleRowCount="6" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        
+        <Label text="Course Code:" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="txtCode" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Course Grade:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="txtGrade" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Max Grade:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="txtMaxGrade" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Label fx:id="lblNotif" text="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        
+        <FlowPane hgap="5" GridPane.columnIndex="0" GridPane.rowIndex="7" >
+            <children>
+                <Button fx:id="btnEdit" text="Edit" onAction="#edit"  />
+                <Button fx:id="btnExit" text="Exit" onAction="#exit" />
+            </children>
+        </FlowPane>
+ 
+    </children>
+    
+</GridPane>
